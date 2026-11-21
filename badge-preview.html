@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>badge preview</title>
+  <style>
+    body { margin: 0; padding: 24px; background: #F3EFE6; display: flex; flex-wrap: wrap; gap: 18px; }
+    .big { width: 120px; height: 120px; border: 1px solid #151719; border-radius: 2px; background: #FAF7F0; display: grid; place-items: center; }
+    .big svg { width: 84px; height: 84px; fill: none; stroke: #151719; stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; }
+    .big svg .rd { stroke: #B83B2B; }
+    .big svg .rdf { fill: #B83B2B; stroke: none; }
+  </style>
+</head>
+<body>
+  <div id="out"></div>
+  <script>
+    fetch('./index.html').then(function (r) { return r.text(); }).then(function (t) {
+      var d = new DOMParser().parseFromString(t, 'text/html');
+      var out = document.getElementById('out');
+      out.style.display = 'contents';
+      d.querySelectorAll('.shop-badge').forEach(function (s) {
+        var div = document.createElement('div');
+        div.className = 'big';
+        div.innerHTML = s.innerHTML;
+        out.appendChild(div);
+      });
+    });
+  </script>
+</body>
+</html>
