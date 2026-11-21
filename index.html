@@ -434,6 +434,9 @@
     }
 
     .shop-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
       padding: 10px 16px 11px 0;
       border-bottom: 1px solid var(--line);
     }
@@ -441,6 +444,37 @@
     .shop-item:nth-child(even) {
       padding-left: 16px;
       border-left: 1px solid var(--line);
+    }
+
+    .shop-badge {
+      flex: 0 0 auto;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--ink);
+      border-radius: 2px;
+      background: var(--card);
+    }
+
+    .shop-badge svg {
+      display: block;
+      width: 23px;
+      height: 23px;
+      fill: none;
+      stroke: var(--ink);
+      stroke-width: 1.1;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .shop-badge svg .rd { stroke: var(--red); }
+
+    .shop-badge svg .rdf { fill: var(--red); stroke: none; }
+
+    .shop-body {
+      flex: 1 1 auto;
+      min-width: 0;
     }
 
     .shop-meta {
@@ -553,8 +587,10 @@
       .shop-head { margin-bottom: 5px; gap: 2px 8px; }
       .shop-head .ck { font-size: 8px; }
       .shop-head .shop-note { font-size: 6.5px; }
-      .shop-item { padding: 6px 7px 7px 0; }
-      .shop-item:nth-child(even) { padding-left: 7px; }
+      .shop-item { gap: 6px; padding: 7px 6px 8px 0; }
+      .shop-item:nth-child(even) { padding-left: 6px; }
+      .shop-badge { width: 28px; height: 28px; border-radius: 1px; }
+      .shop-badge svg { width: 19px; height: 19px; stroke-width: 1.25; }
       .shop-meta { gap: 4px; margin-bottom: 1px; }
       .shop-meta .no { font-size: 6.8px; }
       .shop-meta .when { font-size: 6.8px; }
@@ -785,34 +821,64 @@
           </div>
           <ol class="shop-grid">
             <li class="shop-item">
-              <div class="shop-meta"><span class="no">01</span><span class="when">12/1·12/3~</span><span class="en">LULULEMON</span></div>
-              <div class="shop-name">룰루레몬</div>
-              <div class="shop-where">아자부다이 힐즈 2F · 고어텍스는 12/3~ 빔스 마루노우치</div>
+              <span class="shop-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M9.4 7.1c.4-1.6 1.4-2.5 2.6-2.5s2.2.9 2.6 2.5" /><path d="M9.4 7.1 6.2 8.7 5.3 12.8l1.9.6" /><path d="M14.6 7.1 17.8 8.7l.9 4.1-1.9.6" /><path d="M7.2 13.4v5.7h9.6v-5.7" /><path d="M12 7.4v11.7" class="rd" /><path d="M13.3 11.6h2.3v2.1h-2.3z" /></svg>
+              </span>
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">01</span><span class="when">12/1·12/3~</span><span class="en">LULULEMON</span></div>
+                <div class="shop-name">룰루레몬</div>
+                <div class="shop-where">아자부다이 힐즈 2F · 고어텍스는 12/3~ 빔스 마루노우치</div>
+              </div>
             </li>
             <li class="shop-item">
-              <div class="shop-meta"><span class="no">02</span><span class="when">12/2</span><span class="en">STANDARD PRODUCTS</span></div>
-              <div class="shop-name">스탠다드 프로덕트</div>
-              <div class="shop-where">마로니에 게이트 긴자2 6F</div>
+              <span class="shop-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M5.2 11.6h13.6v7.2H5.2z" /><path d="M5.2 13.1h13.6" /><path d="M9.6 7.2h5.4v4.4H9.6z" /><rect x="10.9" y="8.4" width="2.8" height=".9" class="rdf" /></svg>
+              </span>
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">02</span><span class="when">12/2</span><span class="en">STANDARD PRODUCTS</span></div>
+                <div class="shop-name">스탠다드 프로덕트</div>
+                <div class="shop-where">마로니에 게이트 긴자2 6F</div>
+              </div>
             </li>
             <li class="shop-item">
-              <div class="shop-meta"><span class="no">03</span><span class="when">12/2</span><span class="en">WHISKY</span></div>
-              <div class="shop-name">위스키 · 발렌타인 30년 등</div>
-              <div class="shop-where">빅카메라 유라쿠초 · 리쿼 마운틴 긴자 777</div>
+              <span class="shop-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M9.1 9.4V5.3h3.6v4.1" /><path d="M9.1 9.4 8.3 10.7v8.7h5.2v-8.7L12.7 9.4" /><path d="M9.9 12.6h3.1v3.1H9.9z" class="rdf" /><path d="M15.4 13.2h4.9l-.5 5.4a1.1 1.1 0 0 1-1.1 1h-1.7a1.1 1.1 0 0 1-1.1-1z" /><path d="M15.8 15.2h4.2" class="rd" /></svg>
+              </span>
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">03</span><span class="when">12/2</span><span class="en">WHISKY</span></div>
+                <div class="shop-name">위스키 · 발렌타인 30년 등</div>
+                <div class="shop-where">빅카메라 유라쿠초 · 리쿼 마운틴 긴자 777</div>
+              </div>
             </li>
             <li class="shop-item">
-              <div class="shop-meta"><span class="no">04</span><span class="when any">ANY</span><span class="en">PORTER</span></div>
-              <div class="shop-name">포터</div>
-              <div class="shop-where">탱커 등 일본 면세 구매</div>
+              <span class="shop-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M6.4 10.6h11.2a2.6 2.6 0 0 1 2.6 2.6v3.6a2 2 0 0 1-2 2H5.8a2 2 0 0 1-2-2v-3.6a2.6 2.6 0 0 1 2.6-2.6z" /><path d="M8.6 10.6V9a3.4 3.4 0 0 1 6.8 0v1.6" /><path d="M9.8 13.4h4.4" /><rect x="17.6" y="12" width="1.7" height="2.4" class="rdf" /></svg>
+              </span>
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">04</span><span class="when any">ANY</span><span class="en">PORTER</span></div>
+                <div class="shop-name">포터</div>
+                <div class="shop-where">탱커 등 일본 면세 구매</div>
+              </div>
             </li>
             <li class="shop-item">
-              <div class="shop-meta"><span class="no">05</span><span class="when any">ANY</span><span class="en">YAMAZAKI</span></div>
-              <div class="shop-name">야마자키홈</div>
-              <div class="shop-where">다카나와 · 우에노 취급점</div>
+              <span class="shop-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M6.2 12.4h11.6v6.9H6.2z" /><path d="M5.2 9.6h13.6v2.8H5.2z" /><path d="M9.3 9.6c0-1.5 1.2-2.4 2.7-2.4s2.7.9 2.7 2.4" class="rd" /></svg>
+              </span>
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">05</span><span class="when any">ANY</span><span class="en">YAMAZAKI</span></div>
+                <div class="shop-name">야마자키홈</div>
+                <div class="shop-where">다카나와 · 우에노 취급점</div>
+              </div>
             </li>
             <li class="shop-item">
-              <div class="shop-meta"><span class="no">06</span><span class="when">11/30·12/2</span><span class="en">NOUSAKU</span></div>
-              <div class="shop-name">풍경 · 노우사쿠 <span class="jp">風鈴</span></div>
-              <div class="shop-where">미드타운 3F · 마쓰야 긴자 7F (황동/주물 풍경)</div>
+              <span class="shop-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false"><path d="M12 4.9V3.9" /><path d="M9.1 12.2c0-1.2-.3-1.9-.3-3a3.2 3.2 0 0 1 6.4 0c0 1.1-.3 1.8-.3 3" /><path d="M8.3 12.2h7.4" /><path d="M12 12.2v1.5" /><path d="M10.9 13.7h2.2v5.6h-2.2z" class="rdf" /></svg>
+              </span>
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">06</span><span class="when">11/30·12/2</span><span class="en">NOUSAKU</span></div>
+                <div class="shop-name">풍경 · 노우사쿠 <span class="jp">風鈴</span></div>
+                <div class="shop-where">미드타운 3F · 마쓰야 긴자 7F (황동/주물 풍경)</div>
+              </div>
             </li>
           </ol>
         </section>
