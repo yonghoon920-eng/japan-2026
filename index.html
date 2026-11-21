@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>TOKYO 2026 · 東京 7 NIGHTS 8 DAYS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --paper: #F3EFE6;
+      --card: #FAF7F0;
+      --ink: #151719;
+      --sub: #575B60;
+      --muted: #9A968E;
+      --line: #D6D0C4;
+      --red: #B83B2B;
+      --teal: #2E524E;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+      padding: 20px 12px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .poster {
+      max-width: 920px;
+      margin: 0 auto;
+      border: 2px solid var(--ink);
+      padding: 5px;
+      background: var(--paper);
+    }
+
+    .poster-inner {
+      border: 1px solid var(--line);
+      padding: 28px 28px 24px;
+    }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      color: var(--sub);
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--ink);
+      margin-bottom: 18px;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .top-bar .jp {
+      font-family: "Noto Serif KR", serif;
+      color: var(--red);
+      font-weight: 600;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--ink);
+      box-shadow: 0 4px 0 0 var(--paper), 0 7px 0 0 var(--ink);
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-family: "Noto Serif KR", serif;
+      font-size: clamp(48px, 8vw, 76px);
+      font-weight: 600;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-meta {
+      text-align: left;
+    }
+
+    .hero-meta .dates {
+      font-family: "Noto Serif KR", serif;
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .hero-meta .sub {
+      font-size: 12.5px;
+      color: var(--sub);
+    }
+
+    .hero-meta .route {
+      font-size: 12.5px;
+      color: var(--red);
+      font-weight: 500;
+      margin-top: 2px;
+    }
+
+    .index-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 16px;
+      margin-bottom: 10px;
+    }
+
+    .index-item {
+      padding-right: 16px;
+    }
+
+    .index-item + .index-item {
+      border-left: 1px solid var(--line);
+      padding-left: 18px;
+    }
+
+    .index-item .k {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--red);
+      margin-bottom: 4px;
+    }
+
+    .index-item:first-child .k {
+      color: var(--sub);
+    }
+
+    .index-item .v {
+      font-family: "Noto Serif KR", serif;
+      font-size: 15.5px;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .index-item .d {
+      font-size: 12px;
+      color: var(--sub);
+    }
+
+    .grid-head {
+      display: grid;
+      grid-template-columns: 116px 1fr 1fr;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+
+    .grid-head span:nth-child(2),
+    .grid-head span:nth-child(3) {
+      padding-left: 14px;
+    }
+
+    .day-row {
+      display: grid;
+      grid-template-columns: 116px 1fr 1fr;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .day-row:nth-child(even) {
+      background: var(--card);
+    }
+
+    .day-row.part-break {
+      border-top: 2px solid var(--ink);
+    }
+
+    .date-cell {
+      padding: 12px 8px 12px 4px;
+      border-right: 1px solid var(--line);
+    }
+
+    .date-cell .mm {
+      font-family: "Noto Serif KR", serif;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .date-cell .dd-wrap {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin: 2px 0 6px;
+    }
+
+    .date-cell .dd {
+      font-family: "Noto Serif KR", serif;
+      font-size: 28px;
+      line-height: 1;
+      font-weight: 600;
+    }
+
+    .date-cell .dow {
+      font-size: 11px;
+      color: var(--sub);
+    }
+
+    .date-cell.sun .dd,
+    .date-cell.sun .dow {
+      color: var(--red);
+    }
+
+    .date-cell .part {
+      font-size: 9px;
+      letter-spacing: 0.05em;
+      color: var(--teal);
+    }
+
+    .date-cell .part.p2 { color: var(--sub); }
+    .date-cell .part.dep { color: var(--red); }
+
+    .slot-cell {
+      padding: 12px 14px;
+    }
+
+    .slot-cell + .slot-cell {
+      border-left: 1px solid var(--line);
+    }
+
+    .slot-tag {
+      font-size: 9.5px;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      color: var(--teal);
+      margin-bottom: 4px;
+    }
+
+    .slot-tag.red { color: var(--red); }
+    .slot-tag.open { color: var(--muted); font-weight: 500; }
+
+    .slot-title {
+      font-family: "Noto Serif KR", serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .slot-desc {
+      font-size: 11px;
+      color: var(--sub);
+      line-height: 1.45;
+    }
+
+    .slot-empty {
+      font-family: "Noto Serif KR", serif;
+      font-size: 13.5px;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+
+    .slot-empty-desc {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .credits {
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 2px solid var(--ink);
+    }
+
+    .credits .ck {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--red);
+      margin-bottom: 4px;
+    }
+
+    .credits .cv {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .credits .cfoot {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+    }
+
+    @media (max-width: 680px) {
+      body { padding: 8px 4px; }
+      .poster { padding: 2px; }
+      .poster-inner { padding: 10px 8px; }
+      .top-bar { font-size: 8px; margin-bottom: 8px; padding-bottom: 5px; }
+      .hero { padding-bottom: 10px; margin-bottom: 12px; gap: 6px; }
+      .hero h1 { font-size: 32px; }
+      .hero-meta .dates { font-size: 11px; }
+      .hero-meta .sub, .hero-meta .route { font-size: 8.5px; }
+      .index-strip { grid-template-columns: repeat(3, 1fr); padding-bottom: 8px; margin-bottom: 4px; }
+      .index-item { padding-right: 4px; }
+      .index-item + .index-item { padding-left: 6px; }
+      .index-item .k { font-size: 7.5px; }
+      .index-item .v { font-size: 9.5px; }
+      .index-item .d { font-size: 8px; line-height: 1.25; }
+      .grid-head { grid-template-columns: 50px 1fr 1fr; font-size: 8px; padding: 5px 0; }
+      .grid-head span:nth-child(2), .grid-head span:nth-child(3) { padding-left: 6px; }
+      .day-row { grid-template-columns: 50px 1fr 1fr; }
+      .date-cell { padding: 7px 3px 7px 2px; }
+      .date-cell .mm { font-size: 8.5px; }
+      .date-cell .dd-wrap { gap: 2px; margin: 1px 0 3px; align-items: baseline; }
+      .date-cell .dd { font-size: 17px; }
+      .date-cell .dow { font-size: 8px; }
+      .date-cell .part { font-size: 6.5px; line-height: 1.15; word-break: keep-all; }
+      .slot-cell { padding: 7px 6px; }
+      .slot-tag { font-size: 7.5px; margin-bottom: 2px; }
+      .slot-title { font-size: 9.5px; line-height: 1.3; margin-bottom: 2px; }
+      .slot-desc { font-size: 8.5px; line-height: 1.3; }
+      .slot-empty { font-size: 9.5px; }
+      .slot-empty-desc { font-size: 8.5px; line-height: 1.3; }
+      .credits { margin-top: 10px; padding-top: 8px; }
+      .credits .ck { font-size: 8px; }
+      .credits .cv { font-size: 9px; }
+      .credits .cfoot { font-size: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="poster">
+    <div class="poster-inner">
+      <div class="top-bar">
+        <span>ISSUE NO. 01 · ARCHITECTURAL &amp; LOCAL JOURNEY</span>
+        <span class="jp">東京 2026 / 7 NIGHTS 8 DAYS</span>
+      </div>
+
+      <section class="hero">
+        <h1>TOKYO</h1>
+        <div class="hero-meta">
+          <div class="dates">2026. 11. 29 SUN — 12. 06 SUN</div>
+          <div class="sub">ASIANA BUSINESS OZ102 · OZ101</div>
+          <div class="route">TAKANAWA 4N → RYOGOKU 3N · FOR TWO</div>
+        </div>
+      </section>
+
+      <section class="index-strip">
+        <div class="index-item">
+          <div class="k">FLIGHT · 01</div>
+          <div class="v">OZ102 / OZ101</div>
+          <div class="d">ICN T2 09:00 → NRT T1 11:20 · 13:20 귀국</div>
+        </div>
+        <div class="index-item">
+          <div class="k">PART 1 · 11/29–12/03</div>
+          <div class="v">그랜드 프린스 다카나와</div>
+          <div class="d">아고다 예약 · 시나가와역 도보 5분</div>
+        </div>
+        <div class="index-item">
+          <div class="k">PART 2 · 12/03–12/06</div>
+          <div class="v">더 게이트 호텔 료고쿠</div>
+          <div class="d">12/3–12/6 · 3박</div>
+        </div>
+      </section>
+
+      <div class="grid-head">
+        <span>DATE</span>
+        <span>MORNING (AM)</span>
+        <span>AFTERNOON &amp; EVENING (PM)</span>
+      </div>
+
+      <div class="day-row">
+        <div class="date-cell sun">
+          <div class="mm">11 /</div>
+          <div class="dd-wrap"><span class="dd">29</span><span class="dow">SUN</span></div>
+          <div class="part">PART 1 · TAKANAWA</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag red">OZ102</div>
+          <div class="slot-title">09:00 인천 T2 → 11:20 나리타 T1</div>
+          <div class="slot-desc">입국 수속 후 N'EX 이동 (시나가와 13:23 / 13:53)</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag">CHECK-IN</div>
+          <div class="slot-title">뉴우먼 다카나와</div>
+          <div class="slot-desc">14:30~ 호텔 체크인 후 쇼핑(20시) · 식당가 저녁(23시)</div>
+        </div>
+      </div>
+
+      <div class="day-row">
+        <div class="date-cell">
+          <div class="mm">11 /</div>
+          <div class="dd-wrap"><span class="dd">30</span><span class="dow">MON</span></div>
+          <div class="part">PART 1 · TAKANAWA</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag">MUSEUMS CLOSED</div>
+          <div class="slot-empty">—</div>
+          <div class="slot-empty-desc">주요 미술관 휴관일 · 오전 여유</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag red">BOOKED</div>
+          <div class="slot-title">15:00 카나데 라운지 → 에비스 브루어리</div>
+          <div class="slot-desc">가조엔 2시간 좌석 후 17:15~ 에비스(월 20시 마감)</div>
+        </div>
+      </div>
+
+      <div class="day-row">
+        <div class="date-cell">
+          <div class="mm">12 /</div>
+          <div class="dd-wrap"><span class="dd">01</span><span class="dow">TUE</span></div>
+          <div class="part">PART 1 · TAKANAWA</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag open">OPEN</div>
+          <div class="slot-empty">—</div>
+          <div class="slot-empty-desc">오전 일정 미정</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag">ARCHITECTURE</div>
+          <div class="slot-title">아자부다이 힐즈</div>
+          <div class="slot-desc">15~16시 건축·정원 산책 → 해 질 녘 도쿄타워 뷰</div>
+        </div>
+      </div>
+
+      <div class="day-row">
+        <div class="date-cell">
+          <div class="mm">12 /</div>
+          <div class="dd-wrap"><span class="dd">02</span><span class="dow">WED</span></div>
+          <div class="part">PART 1 · TAKANAWA</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag open">OPEN</div>
+          <div class="slot-empty">—</div>
+          <div class="slot-empty-desc">오전 일정 미정</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag open">OPEN</div>
+          <div class="slot-empty">—</div>
+          <div class="slot-empty-desc">오후 일정 미정</div>
+        </div>
+      </div>
+
+      <div class="day-row part-break">
+        <div class="date-cell">
+          <div class="mm">12 /</div>
+          <div class="dd-wrap"><span class="dd">03</span><span class="dow">THU</span></div>
+          <div class="part p2">PART 2 · RYOGOKU</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag">MOVE</div>
+          <div class="slot-title">다카나와 체크아웃 → 료고쿠 이동</div>
+          <div class="slot-desc">JR 소부선 약 25분(253엔) / 택시 약 31분</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag red">CHECK-IN</div>
+          <div class="slot-title">더 게이트 호텔 료고쿠 체크인</div>
+          <div class="slot-desc">저녁 일정 미정</div>
+        </div>
+      </div>
+
+      <div class="day-row">
+        <div class="date-cell">
+          <div class="mm">12 /</div>
+          <div class="dd-wrap"><span class="dd">04</span><span class="dow">FRI</span></div>
+          <div class="part p2">PART 2 · RYOGOKU</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag open">OPEN</div>
+          <div class="slot-empty">—</div>
+          <div class="slot-empty-desc">오전 일정 미정</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag">HORYUJI ~20:00</div>
+          <div class="slot-empty">—</div>
+          <div class="slot-empty-desc">오후 일정 미정 (호류지 보물관 야간 연장)</div>
+        </div>
+      </div>
+
+      <div class="day-row">
+        <div class="date-cell">
+          <div class="mm">12 /</div>
+          <div class="dd-wrap"><span class="dd">05</span><span class="dow">SAT</span></div>
+          <div class="part p2">PART 2 · RYOGOKU</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag open">OPEN</div>
+          <div class="slot-empty">—</div>
+          <div class="slot-empty-desc">오전 일정 미정</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag">HORYUJI ~20:00</div>
+          <div class="slot-empty">—</div>
+          <div class="slot-empty-desc">오후 일정 미정 (호류지 보물관 야간 연장)</div>
+        </div>
+      </div>
+
+      <div class="day-row">
+        <div class="date-cell sun">
+          <div class="mm">12 /</div>
+          <div class="dd-wrap"><span class="dd">06</span><span class="dow">SUN</span></div>
+          <div class="part dep">DEPARTURE</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag">CHECK-OUT</div>
+          <div class="slot-title">료고쿠 체크아웃 → 나리타 T1 이동</div>
+          <div class="slot-desc">비즈니스 라운지 이용</div>
+        </div>
+        <div class="slot-cell">
+          <div class="slot-tag red">OZ101</div>
+          <div class="slot-title">13:20 나리타 T1 → 인천 T2</div>
+          <div class="slot-desc">귀국</div>
+        </div>
+      </div>
+
+      <footer class="credits">
+        <div class="ck">CURATED SPOTS (CANDIDATES)</div>
+        <div class="cv">우에노 호류지 보물관 (다니구치 요시오) · 국립서양미술관 · 에도 도쿄 박물관 · 스미다 호쿠사이 미술관 (세지마 가즈요)</div>
+        <div class="cfoot">
+          <span>TOKYO TRAVEL ARCHIVE · 2026 EDITION</span>
+          <span>UPDATED 2026.11.21</span>
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
