@@ -438,16 +438,26 @@
       border-bottom: 1px solid var(--line);
     }
 
+    /* die-cut sticker thumbnail: transparent PNG, no frame */
     .shop-photo {
       float: right;
-      width: 48px;
-      height: 48px;
-      margin: 1px 0 4px 10px;
-      object-fit: cover;
-      border: 1px solid rgba(28, 27, 24, 0.18);
-      border-radius: 2px;
-      background: var(--card);
+      width: 52px;
+      height: 52px;
+      margin: 0 1px 6px 12px;
+      object-fit: contain;
+      background: transparent;
+      border: none;
+      border-radius: 0;
+      filter: drop-shadow(0 2px 3px rgba(28, 27, 24, 0.22));
+      transform-origin: 50% 50%;
+      transform: rotate(-5deg);
     }
+
+    .shop-item:nth-child(2) .shop-photo { transform: rotate(4deg); }
+    .shop-item:nth-child(3) .shop-photo { transform: rotate(-3deg); }
+    .shop-item:nth-child(4) .shop-photo { transform: rotate(5deg); }
+    .shop-item:nth-child(5) .shop-photo { transform: rotate(-4deg); }
+    .shop-item:nth-child(6) .shop-photo { transform: rotate(3deg); }
 
     .shop-item:nth-child(even) {
       padding-left: 16px;
@@ -563,7 +573,7 @@
       .shop-head .shop-note { font-size: 6.5px; }
       .shop-item { gap: 6px; padding: 7px 6px 8px 0; }
       .shop-item:nth-child(even) { padding-left: 6px; }
-      .shop-photo { width: 36px; height: 36px; margin: 0 0 3px 7px; }
+      .shop-photo { width: 40px; height: 40px; margin: 0 0 4px 8px; filter: drop-shadow(0 1px 2px rgba(28, 27, 24, 0.2)); }
       .shop-meta { gap: 4px; margin-bottom: 1px; }
       .shop-meta .no { font-size: 6.8px; }
       .shop-meta .when { font-size: 6.8px; }
@@ -793,7 +803,7 @@
           </div>
           <ol class="shop-grid">
             <li class="shop-item">
-              <img class="shop-photo" src="assets/lululemon.jpg" alt="룰루레몬 고어텍스 재킷" width="48" height="48" loading="lazy">
+              <img class="shop-photo" src="assets/sticker-lululemon.png" alt="룰루레몬 고어텍스 재킷" width="52" height="52" loading="lazy">
               <div class="shop-body">
                 <div class="shop-meta"><span class="no">01</span><span class="when">12/1·12/3~</span></div>
                 <div class="shop-name">룰루레몬</div>
@@ -801,7 +811,7 @@
               </div>
             </li>
             <li class="shop-item">
-              <img class="shop-photo" src="assets/standard-products.jpg" alt="스탠다드 프로덕트 제품" width="48" height="48" loading="lazy">
+              <img class="shop-photo" src="assets/sticker-standard.png" alt="스탠다드 프로덕트 제품" width="52" height="52" loading="lazy">
               <div class="shop-body">
                 <div class="shop-meta"><span class="no">02</span><span class="when">12/2</span></div>
                 <div class="shop-name">스탠다드 프로덕트</div>
@@ -809,7 +819,7 @@
               </div>
             </li>
             <li class="shop-item">
-              <img class="shop-photo" src="assets/whisky.jpg" alt="발렌타인 30년" width="48" height="48" loading="lazy">
+              <img class="shop-photo" src="assets/sticker-whisky.png" alt="발렌타인 30년" width="52" height="52" loading="lazy">
               <div class="shop-body">
                 <div class="shop-meta"><span class="no">03</span><span class="when">12/2</span></div>
                 <div class="shop-name">위스키 · 발렌타인 30년 등</div>
@@ -817,7 +827,7 @@
               </div>
             </li>
             <li class="shop-item">
-              <img class="shop-photo" src="assets/porter.jpg" alt="포터 탱커 헬멧백" width="48" height="48" loading="lazy">
+              <img class="shop-photo" src="assets/sticker-porter.png" alt="포터 탱커 헬멧백" width="52" height="52" loading="lazy">
               <div class="shop-body">
                 <div class="shop-meta"><span class="no">04</span><span class="when any">ANY</span></div>
                 <div class="shop-name">포터</div>
@@ -825,7 +835,7 @@
               </div>
             </li>
             <li class="shop-item">
-              <img class="shop-photo" src="assets/yamazaki.jpg" alt="야마자키홈 타워 브레드케이스" width="48" height="48" loading="lazy">
+              <img class="shop-photo" src="assets/sticker-yamazaki.png" alt="야마자키홈 타워 브레드케이스" width="52" height="52" loading="lazy">
               <div class="shop-body">
                 <div class="shop-meta"><span class="no">05</span><span class="when any">ANY</span></div>
                 <div class="shop-name">야마자키홈</div>
@@ -833,7 +843,7 @@
               </div>
             </li>
             <li class="shop-item">
-              <img class="shop-photo" src="assets/nousaku.jpg" alt="노우사쿠 황동 풍경" width="48" height="48" loading="lazy">
+              <img class="shop-photo" src="assets/sticker-nousaku.png" alt="노우사쿠 황동 풍경" width="52" height="52" loading="lazy">
               <div class="shop-body">
                 <div class="shop-meta"><span class="no">06</span><span class="when">11/30·12/2</span></div>
                 <div class="shop-name">풍경 · 노우사쿠 <span class="jp">風鈴</span></div>
