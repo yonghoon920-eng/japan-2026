@@ -273,6 +273,10 @@
     .tl-item {
       display: block;
       padding: 3px 0;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: var(--sub);
+      word-break: keep-all;
     }
 
     .tl-item:first-child { padding-top: 0; }
@@ -324,7 +328,7 @@
     .tl-dot {
       color: var(--muted);
       font-size: 10px;
-      margin: 0 2px 0 5px;
+      margin: 0 3px 0 5px;
     }
 
     .tl-memo {
@@ -420,12 +424,12 @@
       .date-cell .weather.wait { font-size: 7px; }
       .slot-cell { padding: 7px 6px; }
       .slot-tag { font-size: 7.5px; margin-bottom: 3px; }
-      .tl-item { padding: 2.5px 0; }
+      .tl-item { padding: 2.5px 0; font-size: 9px; line-height: 1.4; }
       .tl-time { font-size: 7.5px; margin-right: 4px; letter-spacing: 0; }
       .tl-body { font-size: 8px; line-height: 1.55; }
       .tl-lead, .tl-place { font-size: 9px; line-height: 1.4; }
       .tl-place { text-underline-offset: 2px; -webkit-text-decoration-color: var(--line); }
-      .tl-dot { font-size: 7.5px; margin: 0 1px 0 2px; }
+      .tl-dot { font-size: 7.5px; margin: 0 2px 0 3px; }
       .tl-memo { font-size: 7.5px; line-height: 1.45; }
       .tl-empty .tl-body { font-size: 8.5px; }
       .credits { margin-top: 10px; padding-top: 8px; }
@@ -487,13 +491,13 @@
           <div class="slot-tag red">OZ102</div>
           <ul class="tl">
             <li class="tl-item"><span class="tl-body"><span class="tl-time">09:00</span><span class="tl-lead">인천공항 T2 출발</span></span></li>
-            <li class="tl-item"><span class="tl-body"><span class="tl-time">11:20</span><span class="tl-lead">나리타공항 T1 도착</span><span class="tl-dot">·</span><span class="tl-memo">N'EX 이동 · 시나가와 13:23 / 13:53</span></span></li>
+            <li class="tl-item"><span class="tl-body"><span class="tl-time">11:20</span><span class="tl-lead">나리타공항 T1 도착</span>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;N'EX 이동 · 시나가와 13:23 / 13:53</span></span></li>
           </ul>
         </div>
         <div class="slot-cell">
           <div class="slot-tag">SHOPPING &amp; DINING</div>
           <ul class="tl">
-            <li class="tl-item"><span class="tl-body"><span class="tl-time">15:00</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=NEWoMan+TAKANAWA+Tokyo" target="_blank" rel="noopener">뉴우먼 다카나와</a><span class="tl-dot">·</span><span class="tl-memo">쇼핑 ~20시 <span class="mi">/</span> 식당가 ~23시</span></span></li>
+            <li class="tl-item"><span class="tl-body"><span class="tl-time">15:00</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=NEWoMan+TAKANAWA+Tokyo" target="_blank" rel="noopener">뉴우먼 다카나와</a>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;쇼핑 ~20시 <span class="mi">/</span> 식당가 ~23시</span></span></li>
           </ul>
         </div>
       </div>
@@ -507,14 +511,14 @@
         <div class="slot-cell">
           <div class="slot-tag">DESIGN · ARCHI</div>
           <ul class="tl">
-            <li class="tl-item"><span class="tl-body"><span class="tl-time">10:00</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=21_21+DESIGN+SIGHT+Tokyo" target="_blank" rel="noopener">21_21 DESIGN SIGHT</a><span class="tl-dot">·</span><span class="tl-memo">「호조키에서 배우다」 작은 건축전 <span class="mi">/</span> ~19시</span></span></li>
+            <li class="tl-item"><span class="tl-body"><span class="tl-time">10:00</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=21_21+DESIGN+SIGHT+Tokyo" target="_blank" rel="noopener">21_21 DESIGN SIGHT</a>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;「호조키에서 배우다」 작은 건축전 <span class="mi">/</span> ~19시</span></span></li>
           </ul>
         </div>
         <div class="slot-cell">
           <div class="slot-tag red">BOOKED</div>
           <ul class="tl">
-            <li class="tl-item"><span class="tl-body"><span class="tl-time">15:00</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Kanade+Lounge+Gajoen+Tokyo" target="_blank" rel="noopener">카나데 라운지</a><span class="tl-dot">·</span><span class="tl-memo">가조엔 도쿄 (2시간)</span></span></li>
-            <li class="tl-item"><span class="tl-body"><span class="tl-time">17:15</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Yebisu+Brewery+Tokyo" target="_blank" rel="noopener">에비스 브루어리</a><span class="tl-dot">·</span><span class="tl-memo">가든 플레이스 야경 (~20시)</span></span></li>
+            <li class="tl-item"><span class="tl-body"><span class="tl-time">15:00</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Kanade+Lounge+Gajoen+Tokyo" target="_blank" rel="noopener">카나데 라운지</a>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;가조엔 도쿄 (2시간)</span></span></li>
+            <li class="tl-item"><span class="tl-body"><span class="tl-time">17:15</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Yebisu+Brewery+Tokyo" target="_blank" rel="noopener">에비스 브루어리</a>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;가든 플레이스 야경 (~20시)</span></span></li>
           </ul>
         </div>
       </div>
@@ -534,8 +538,8 @@
         <div class="slot-cell">
           <div class="slot-tag">ARCHITECTURE</div>
           <ul class="tl">
-            <li class="tl-item"><span class="tl-body"><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=lululemon+Azabudai+Hills" target="_blank" rel="noopener">룰루레몬</a><span class="tl-dot">·</span><span class="tl-memo">아자부다이 타워 플라자 2F</span></span></li>
-            <li class="tl-item"><span class="tl-body"><span class="tl-time">15:30</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Azabudai+Hills+Tokyo" target="_blank" rel="noopener">아자부다이 힐즈</a><span class="tl-dot">·</span><span class="tl-memo">정원 산책 · 도쿄타워 뷰</span></span></li>
+            <li class="tl-item"><span class="tl-body"><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=lululemon+Azabudai+Hills" target="_blank" rel="noopener">룰루레몬</a>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;아자부다이 타워 플라자 2F</span></span></li>
+            <li class="tl-item"><span class="tl-body"><span class="tl-time">15:30</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Azabudai+Hills+Tokyo" target="_blank" rel="noopener">아자부다이 힐즈</a>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;정원 산책 · 도쿄타워 뷰</span></span></li>
           </ul>
         </div>
       </div>
@@ -549,14 +553,14 @@
         <div class="slot-cell">
           <div class="slot-tag">ART · ARCHI</div>
           <ul class="tl">
-            <li class="tl-item"><span class="tl-body"><span class="tl-time">10:00</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=The+National+Art+Center+Tokyo" target="_blank" rel="noopener">국립신미술관</a><span class="tl-dot">·</span><span class="tl-memo">구로카와 기쇼 건축 · 루브르전 <span class="mi">/</span> ~18시</span></span></li>
+            <li class="tl-item"><span class="tl-body"><span class="tl-time">10:00</span><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=The+National+Art+Center+Tokyo" target="_blank" rel="noopener">국립신미술관</a>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;구로카와 기쇼 건축 · 루브르전 <span class="mi">/</span> ~18시</span></span></li>
           </ul>
         </div>
         <div class="slot-cell">
           <div class="slot-tag">SHOPPING</div>
           <ul class="tl">
-            <li class="tl-item"><span class="tl-body"><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Standard+Products+Marronnier+Gate+Ginza+2" target="_blank" rel="noopener">스탠다드 프로덕트</a><span class="tl-dot">·</span><span class="tl-memo">마로니에 게이트 긴자2 6F <span class="mi">/</span> 11~21시</span></span></li>
-            <li class="tl-item"><span class="tl-body"><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Liquor+Mountain+Ginza+777" target="_blank" rel="noopener">리쿼 마운틴 긴자 777</a><span class="tl-dot">·</span><span class="tl-memo">위스키 쇼핑</span></span></li>
+            <li class="tl-item"><span class="tl-body"><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Standard+Products+Marronnier+Gate+Ginza+2" target="_blank" rel="noopener">스탠다드 프로덕트</a>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;마로니에 게이트 긴자2 6F <span class="mi">/</span> 11~21시</span></span></li>
+            <li class="tl-item"><span class="tl-body"><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Liquor+Mountain+Ginza+777" target="_blank" rel="noopener">리쿼 마운틴 긴자 777</a>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;위스키 쇼핑</span></span></li>
           </ul>
         </div>
       </div>
@@ -570,7 +574,7 @@
         <div class="slot-cell">
           <div class="slot-tag">MOVE</div>
           <ul class="tl">
-            <li class="tl-item"><span class="tl-body"><span class="tl-lead">다카나와 → 료고쿠 이동</span><span class="tl-dot">·</span><span class="tl-memo">JR 소부선 약 25분(253엔) <span class="mi">/</span> 택시 약 31분</span></span></li>
+            <li class="tl-item"><span class="tl-body"><span class="tl-lead">다카나와 → 료고쿠 이동</span>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;JR 소부선 약 25분(253엔) <span class="mi">/</span> 택시 약 31분</span></span></li>
           </ul>
         </div>
         <div class="slot-cell">
@@ -596,7 +600,7 @@
         <div class="slot-cell">
           <div class="slot-tag">MUSEUM · ~20:00</div>
           <ul class="tl">
-            <li class="tl-item"><span class="tl-body"><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Gallery+of+Horyuji+Treasures+Tokyo" target="_blank" rel="noopener">도쿄국립박물관 · 호류지 보물관</a><span class="tl-dot">·</span><span class="tl-memo">금요일 20시 연장 · 다니구치 요시오</span></span></li>
+            <li class="tl-item"><span class="tl-body"><a class="tl-place" href="https://www.google.com/maps/search/?api=1&amp;query=Gallery+of+Horyuji+Treasures+Tokyo" target="_blank" rel="noopener">도쿄국립박물관 · 호류지 보물관</a>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;금요일 20시 연장 · 다니구치 요시오</span></span></li>
           </ul>
         </div>
       </div>
@@ -630,7 +634,7 @@
         <div class="slot-cell">
           <div class="slot-tag">DEPARTURE</div>
           <ul class="tl">
-            <li class="tl-item"><span class="tl-body"><span class="tl-lead">나리타공항 T1 이동</span><span class="tl-dot">·</span><span class="tl-memo">비즈니스 라운지</span></span></li>
+            <li class="tl-item"><span class="tl-body"><span class="tl-lead">나리타공항 T1 이동</span>​<span class="tl-memo"><span class="tl-dot">·</span>&#8288;비즈니스 라운지</span></span></li>
           </ul>
         </div>
         <div class="slot-cell">
