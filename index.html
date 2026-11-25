@@ -465,6 +465,7 @@
     .shop-item:nth-child(11) .shop-photo { transform: rotate(-4deg); }
     .shop-item:nth-child(12) .shop-photo { transform: rotate(3deg); }
     .shop-item:nth-child(13) .shop-photo { transform: rotate(-3deg); }
+    .shop-item:nth-child(14) .shop-photo { transform: rotate(4deg); }
 
     .shop-item:nth-child(even) {
       padding-left: 16px;
@@ -518,6 +519,23 @@
       font-weight: 500;
       color: var(--sub);
       margin-left: 2px;
+    }
+
+    .shop-name a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--line);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+      -webkit-text-decoration-color: var(--line);
+      transition: color 0.15s ease, text-decoration-color 0.15s ease;
+    }
+
+    .shop-name a:hover,
+    .shop-name a:focus-visible {
+      color: var(--red);
+      text-decoration-color: var(--red);
+      -webkit-text-decoration-color: var(--red);
     }
 
     .shop-where {
@@ -794,7 +812,7 @@
         <section class="shop">
           <div class="shop-head">
             <div class="ck">SHOPPING LIST</div>
-            <div class="shop-note">WISH LIST · 13 ITEMS</div>
+            <div class="shop-note">WISH LIST · 14 ITEMS</div>
           </div>
           <ol class="shop-grid">
             <li class="shop-item">
@@ -899,6 +917,14 @@
                 <div class="shop-meta"><span class="no">13</span><span class="when">11/30·12/1·12/2</span></div>
                 <div class="shop-name">트리 오너먼트</div>
                 <div class="shop-where">미드타운 B1 마르쉐 · 아자부다이 힐즈 마켓 · 긴자 미쓰코시 7F</div>
+              </div>
+            </li>
+            <li class="shop-item">
+              <img class="shop-photo" src="assets/sticker-caspace.png" alt="cas:pace 우주 콘셉트 폰케이스" width="52" height="52" loading="lazy">
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">14</span><span class="when">11/30·12/5</span></div>
+                <div class="shop-name"><a href="https://maps.google.com/?cid=7100548764819391178" target="_blank" rel="noopener">cas:pace 폰케이스</a></div>
+                <div class="shop-where">하라주쿠 우라하라 · 우주 콘셉트 폰케이스 (12:00~)</div>
               </div>
             </li>
           </ol>
