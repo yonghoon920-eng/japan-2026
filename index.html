@@ -550,6 +550,19 @@
       margin-top: 14px;
     }
 
+    /* ---- food list ---- */
+    .shop.food + .shop {
+      border-top: 1px solid var(--ink);
+    }
+
+    .food-lead {
+      font-size: 10.5px;
+      line-height: 1.5;
+      color: var(--sub);
+      margin: -1px 0 8px;
+      word-break: keep-all;
+    }
+
     @media (max-width: 680px) {
       body { padding: 8px 4px; }
       .poster { padding: 2px; }
@@ -607,6 +620,7 @@
       .shop-name .jp { font-size: 8px; }
       .shop-where { margin-top: 2px; font-size: 7.5px; line-height: 1.45; }
       .shop + .cfoot { margin-top: 7px; }
+      .food-lead { font-size: 7.5px; line-height: 1.45; margin-bottom: 5px; }
     }
   </style>
 </head>
@@ -808,6 +822,64 @@
       <footer class="credits">
         <div class="ck">CURATED SPOTS (CANDIDATES)</div>
         <div class="cv">우에노 호류지 보물관 (다니구치 요시오) · 국립서양미술관 · 에도 도쿄 박물관</div>
+
+        <section class="shop food">
+          <div class="shop-head">
+            <div class="ck">FOOD LIST</div>
+            <div class="shop-note">EAT LIST · 6 ITEMS</div>
+          </div>
+          <div class="food-lead">메뉴를 먼저 정해두고, 동선에 맞는 집에서 골라 먹는다.</div>
+          <ol class="shop-grid">
+            <li class="shop-item">
+              <img class="shop-photo" src="assets/sticker-gyutan.png" alt="우설 네기시" width="52" height="52" loading="lazy">
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">01</span><span class="when">12/2 · 12/4</span></div>
+                <div class="shop-name">우설 <span class="jp">牛タン</span></div>
+                <div class="shop-where">네기시 · 긴자점 (12/2) · 우에노 요시이케 8F (12/4)</div>
+              </div>
+            </li>
+            <li class="shop-item">
+              <img class="shop-photo" src="assets/sticker-hamburg.png" alt="함박스테이크" width="52" height="52" loading="lazy">
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">02</span><span class="when any">ANY</span></div>
+                <div class="shop-name">함박스테이크 <span class="jp">ハンバーグ</span></div>
+                <div class="shop-where">츠바메 그릴 · 시나가와 · 긴자</div>
+              </div>
+            </li>
+            <li class="shop-item">
+              <img class="shop-photo" src="assets/sticker-ramen.png" alt="라멘" width="52" height="52" loading="lazy">
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">03</span><span class="when any">ANY</span></div>
+                <div class="shop-name">라멘 <span class="jp">ラーメン</span></div>
+                <div class="shop-where">이루카 도쿄 (롯폰기) · 카모 토 네기 (우에노)</div>
+              </div>
+            </li>
+            <li class="shop-item">
+              <img class="shop-photo" src="assets/sticker-tonkatsu.png" alt="돈까스" width="52" height="52" loading="lazy">
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">04</span><span class="when any">ANY</span></div>
+                <div class="shop-name">돈까스 <span class="jp">とんかつ</span></div>
+                <div class="shop-where">톤카츠 하세카와 (료고쿠)</div>
+              </div>
+            </li>
+            <li class="shop-item">
+              <img class="shop-photo" src="assets/sticker-shioyaki.png" alt="생선구이" width="52" height="52" loading="lazy">
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">05</span><span class="when any">ANY</span></div>
+                <div class="shop-name">생선구이 <span class="jp">焼き魚</span></div>
+                <div class="shop-where">신파치 식당 (가미야초 · 다마치 · 닌교초)</div>
+              </div>
+            </li>
+            <li class="shop-item">
+              <img class="shop-photo" src="assets/sticker-tendon.png" alt="시로에비테이 흰새우 튀김덮밥" width="52" height="52" loading="lazy">
+              <div class="shop-body">
+                <div class="shop-meta"><span class="no">06</span><span class="when">12/3</span></div>
+                <div class="shop-name">시로에비테이 <span class="jp">白えび天丼</span></div>
+                <div class="shop-where">흰새우 튀김덮밥 · 도쿄역 이치반가이 B1</div>
+              </div>
+            </li>
+          </ol>
+        </section>
 
         <section class="shop">
           <div class="shop-head">
